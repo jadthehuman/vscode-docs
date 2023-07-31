@@ -33,8 +33,11 @@ Glob patterns in the Search view work differently than in settings such as `file
 
 ### Why do glob patterns not support feature X or Y?
 
-We implemented our own [glob matching library](https://github.com/microsoft/vscode/blob/main/src/vs/base/common/glob.ts) with a goal to provide optimal performance for most typical patterns. If you expect a certain glob syntax to be supported, you can report an issue with your usecase.
+We implemented our own [glob matching library][glob] with a goal to provide optimal performance for most typical patterns. If you expect a certain glob syntax to be supported, you can report an issue with your usecase.
 
 ### Why does my glob pattern not work?
 
 Make sure that on Windows you are using `/` to separate paths and not `\`. Glob patterns in VS Code require `/` for separating paths but they will both match on `/` and `\` in paths.
+
+
+[glob]: https://github.com/microsoft/vscode/blob/main/src/vs/base/common/glob.ts
